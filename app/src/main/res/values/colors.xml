@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="white">#FFFFFF</color> 
+   <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FFC2DD</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="gray">#FF9E9E9E</color>
+
+   <color name="screen_bg">#FFFFFF</color>
+<color name="toolbar_bg">#FFFFFF</color>
+<color name="text_body">#333333</color>
+<color name="icon_secondary">#888888</color>
+
+<color name="dialog_bg">#FFFFFF</color>
+<color name="dialog_title_text">#303234</color>
+<color name="dialog_body_text">#737270</color>
+<color name="dialog_input_text">#737270</color>
+<color name="dialog_warning_text">#D32F2F</color>
+<color name="dialog_action_text">#A8C7FA</color>
+    
+   <color name="input_stroke_focused">#A8C7FA</color>
+<color name="input_stroke_unfocused">#8E918F</color>
+   
+  <!-- Brand Blue (used for links, progress, and experimental tag) -->
+<color name="brand_blue">#1E88E5</color>
+
+   <!-- Typing Indicator -->
+<color name="typing_bubble_bg">#FFFFFF</color> <!-- Your exact original white -->
+<color name="typing_dot_color">#000000</color> <!-- Your exact original black -->
+    
+<!-- Model Card Background -->
+<color name="model_card_bg">#F7FBFD</color> <!-- A very soft off-white -->
+<color name="model_card_stroke">#E0E0E0</color>
+
+<!-- Progress Bar Background -->
+<color name="progress_track">#E0E0E0</color>
+
+  <color name="prompt_input_bg">#FFFFFF</color>
+<color name="prompt_input_stroke">#CCCCCC</color>
+    <!-- Skeleton Loader Colors (Light Mode) -->
+<color name="skeleton_title">#EBEBEB</color>
+<color name="skeleton_text">#F5F5F5</color>
+<!-- Search Bar Background (Default to a light gray if you don't have one) -->
+<color name="search_bar_bg">#F0F0F0</color> 
+    
+   <!-- We defined this in the last step, just double checking! -->
+<color name="retry_btn_bg">#000000</color>
+<color name="retry_btn_text">#FFFFFF</color>
+    
+<color name="style_button_bg">#E3F2FD</color>
+<color name="experimental_tag_bg">#E3F2FD</color>
+<color name="progress_tint_pink">#FF4081</color>
+    
+   <!-- Selected Chat Item Background -->
+<color name="chat_item_selected_bg">#F0F0F0</color>
+<!-- Submit/Save Button -->
+<color name="btn_submit_bg">#000000</color>
+<color name="btn_submit_text">#FFFFFF</color>
+
+   <!-- Bottom Sheet Colors -->
+<color name="sheet_bg">#FFFFFF</color> <!-- Or whatever your current sheet bg is -->
+
+   <!-- Main Activity Chat Colors -->
+
+<color name="edit_pill_text">#0088FF</color>
+<color name="send_button_bg">#0088FF</color>
+<color name="send_button_icon">#FFFFFF</color>
+<color name="circle_remove_bg">#E0E0E0</color>
+<color name="chat_input_stroke">#E0E0E0</color>
+    
+<color name="tab_container_bg">#F0F0F0</color> <!-- Assuming a light gray for the tab container -->
+<color name="tab_selected_bg">#FFFFFF</color>
+<color name="button_pill_bg">#E0E0E0</color> <!-- Assuming a light gray for the button -->
+   <color name="tab_selected_stroke">#E0E0E0</color>
+<color name="check_circle_green">#4CAF50</color>
+   
+   <!-- Chat Interface Colors -->
+<color name="edit_pill_bg">#F2F4F8</color>
+<color name="chat_btn_active_bg">#000000</color>
+<color name="chat_btn_disabled_bg">#D6D6D6</color>
+   
+   <color name="drawer_scrim">#66000000</color>
+<!-- Remove Button (Your exact pink) -->
+<color name="btn_remove_bg">#FE2C55</color>
+<color name="btn_remove_text">#FFFFFF</color><!-- Bottom Sheet & Settings Backgrounds -->
+<color name="sheet_drag_handle">#454545</color>
+<color name="settings_group_bg">#F2F2F7</color>
+<color name="advanced_options_bg">#F4F5F6</color>
+
+   <!-- Code Block Colors -->
+<color name="code_block_bg">#F8F9FA</color> <!-- Soft light gray -->
+<color name="code_block_divider">#FFFFFF</color> <!-- The white divider you had -->
+
+   <!-- Professional Switch Colors (Light Mode) -->
+<color name="switch_thumb_checked">#FFFFFF</color>     <!-- White thumb when ON -->
+<color name="switch_thumb_unchecked">#5F6368</color>   <!-- Dark grey thumb when OFF -->
+<color name="switch_track_checked">#000000</color>     <!-- Black track when ON -->
+<color name="switch_track_unchecked">#E8EAED</color>   <!-- Light grey track when OFF -->
+    
+   <!-- Chat Input & Buttons -->
+<color name="chat_input_bg">#FFFFFF</color>
+
+<color name="send_btn_active_bg">#000000</color>    <!-- Black when typing -->
+<color name="send_btn_active_icon">#FFFFFF</color>  <!-- White arrow -->
+<color name="send_btn_disabled_bg">#F0F0F0</color>  <!-- Light grey circle when empty -->
+<color name="send_btn_disabled_icon">#888888</color><!-- Dim arrow -->
+   <color name="user_bubble_bg">#F8F8F8</color>
+    
+    
+<color name="btn_delete_prompt_bg">#E6E6E6</color>
+<color name="btn_delete_prompt_text">#D32F2F</color>
+   <color name="add_key_btn_bg">#FAFAFA</color>      <!-- was #F5F5F5, now matches original -->
+<color name="add_key_btn_stroke">#E0E0E0</color>  <!-- new -->
+<color name="provider_card_bg">#F7F7F7</color>
+<color name="custom_input_bg">#FFFFFF</color>
+<color name="custom_input_stroke">#EBEBEB</color>
+<color name="delete_btn_bg">#E6E6E6</color>
+<color name="delete_btn_text">#D32F2F</color>
+
+   <color name="brand_icon">#000000</color>
+   <color name="text_primary">#000000</color>
+<color name="text_secondary">#666666</color>
+    
+<!-- Make the group backgrounds pure white to match the sheet -->
+
+    <color name="divider_different">#E0E0E0</color>
+
+<!-- Make the divider a distinct, professional light grey -->
+<color name="divider_color">#FFFFFF</color>
+
+    
+ </resources>

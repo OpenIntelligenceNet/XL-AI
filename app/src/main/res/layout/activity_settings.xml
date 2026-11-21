@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://tools.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/screen_bg"
+     android:orientation="vertical"
+     tools:context=".SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+         android:layout_height="?attr/actionBarSize"
+         android:layout_width="match_parent"
+         android:background="@color/screen_bg"
+         app:title="Settings"
+         app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+         app:navigationIcon="?attr/homeAsUpIndicator"
+         app:titleTextColor="@color/text_primary"
+         android:id="@+id/settingsToolbar" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:orientation="vertical"
+         android:paddingTop="8dp">
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:background="?attr/selectableItemBackground"
+             android:clickable="true"
+             android:paddingVertical="20dp"
+             android:paddingHorizontal="16dp"
+             android:focusable="true"
+             android:id="@+id/btnSystemPrompt">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:layout_toStartOf="@id/ivChevron"
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textSize="16sp"
+                 android:textColor="@color/text_primary"
+                 android:layout_alignParentStart="true"
+                 android:text="Custom System Prompt" />
+
+            <ImageView
+                 android:layout_height="24dp"
+                 android:layout_width="24dp"
+                 android:layout_centerInParent="true"
+                 android:contentDescription="Go to system prompt settings"
+                 android:src="@drawable/ic_chevron_right"
+                 app:tint="@color/icon_secondary"
+                 android:layout_alignParentEnd="true"
+                 android:id="@+id/ivChevron" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:background="?attr/selectableItemBackground"
+             android:clickable="true"
+             android:paddingVertical="20dp"
+             android:paddingHorizontal="16dp"
+             android:focusable="true"
+             android:id="@+id/btnBringYourOwnKey">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:layout_toStartOf="@id/ivChevron2"
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textSize="16sp"
+                 android:textColor="@color/text_primary"
+                 android:layout_alignParentStart="true"
+                 android:text="Bring your own key" />
+
+            <ImageView
+                 android:layout_height="24dp"
+                 android:layout_width="24dp"
+                 android:layout_centerInParent="true"
+                 android:contentDescription="Go to API key settings"
+                 android:src="@drawable/ic_chevron_right"
+                 app:tint="@color/icon_secondary"
+                 android:layout_alignParentEnd="true"
+                 android:id="@+id/ivChevron2" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

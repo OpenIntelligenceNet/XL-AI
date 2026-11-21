@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:background="@drawable/dialog_background"
+     android:layout_margin="24dp"
+     android:padding="24dp"
+     android:orientation="vertical"
+     android:layout_gravity="center">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="center"
+         android:textAppearance="@style/SafeTextAppearance"
+         android:textSize="20sp"
+         android:textColor="@color/text_primary"
+         android:id="@+id/tvDialogTitle"
+         android:text="Delete Chat"
+         android:textStyle="bold" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="28dp"
+         android:gravity="center"
+         android:textAppearance="@style/SafeTextAppearance"
+         android:textSize="16sp"
+         android:textColor="@color/text_secondary"
+         android:layout_marginTop="16dp"
+         android:lineSpacingMultiplier="1.2"
+         android:id="@+id/tvDialogMessage"
+         android:text="This action cannot be undone.\nConfirm deletion?" />
+
+    <LinearLayout
+         android:layout_height="54dp"
+         android:layout_width="match_parent"
+         android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+             android:layout_height="match_parent"
+             android:layout_width="0dp"
+             android:elevation="0dp"
+             android:fadingEdge="none"
+             android:textSize="16sp"
+             android:stateListAnimator="@null"
+             android:textColor="@color/text_primary"
+             android:background="@drawable/btn_cancel_background"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:layout_margin="8dp"
+             android:textAllCaps="false"
+             android:backgroundTint="@null"
+             android:layout_weight="1"
+             android:id="@+id/btnCancel"
+             android:text="Cancel"
+             android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+             android:layout_height="match_parent"
+             android:layout_width="0dp"
+             android:elevation="0dp"
+             android:fadingEdge="none"
+             android:textSize="16sp"
+             android:stateListAnimator="@null"
+             android:textColor="@color/btn_remove_text"
+             android:background="@drawable/btn_delete_background"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:layout_margin="8dp"
+             android:textAllCaps="false"
+             android:backgroundTint="@null"
+             android:layout_weight="1"
+             android:id="@+id/btnConfirmDelete"
+             android:text="Delete"
+             android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@drawable/dialog_background"
+    android:layout_margin="24dp"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textAppearance="@style/SafeTextAppearance"
+        android:textColor="@color/text_primary"
+        android:id="@+id/tvStopAiTitle"
+        android:text="Stop Local AI"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textAppearance="@style/SafeTextAppearance"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="16dp"
+        android:lineSpacingMultiplier="1.2"
+        android:id="@+id/tvStopAiMessage"
+        android:text="This will free up device memory.\nAre you sure you want to stop the model?" />
+
+    <LinearLayout
+        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:elevation="0dp"
+            android:fadingEdge="none"
+            android:textSize="16sp"
+            android:stateListAnimator="@null"
+            android:textAppearance="@style/SafeTextAppearance"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/btn_cancel_background"
+            android:layout_margin="8dp"
+            android:textAllCaps="false"
+            android:backgroundTint="@null"
+            android:layout_weight="1"
+            android:id="@+id/btnStopAiCancel"
+            android:text="Cancel"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:elevation="0dp"
+            android:fadingEdge="none"
+            android:textSize="16sp"
+            android:stateListAnimator="@null"
+            android:textAppearance="@style/SafeTextAppearance"
+            android:textColor="@color/btn_remove_text"
+            android:background="@drawable/btn_delete_background"
+            android:layout_margin="8dp"
+            android:textAllCaps="false"
+            android:backgroundTint="@null"
+            android:layout_weight="1"
+            android:id="@+id/btnStopAiConfirm"
+            android:text="Stop AI"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

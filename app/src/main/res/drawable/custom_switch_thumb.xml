@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/custom_switch_thumb.xml
+     Built with layer-list, NOT <inset>: InsetDrawable reports its insets as
+     padding and SwitchCompat then mis-measures the thumb (squashed track,
+     clipped thumb). layer-list item offsets are not padding, so they are safe.
+
+     Every state is exactly 26dp wide (offset + circle + offset). The switch is
+     52dp wide (2 x 26dp), so the thumb travels 26dp.
+       off      16dp circle, 8dp from the left edge
+       pressed  20dp circle, 6dp from the left edge
+       on       22dp circle, 4dp from the right edge
+     Height is handled by gravity (centered in the 32dp track), so the circle
+     can never stretch.
+     First matching item wins, so disabled states come first. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Disabled, on -->
+    <item android:state_enabled="false" android:state_checked="true">
+        <layer-list>
+            <item android:width="22dp" android:height="22dp"
+                  android:gravity="center_vertical|right" android:right="4dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/sw_thumb_on_disabled"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Disabled, off -->
+    <item android:state_enabled="false">
+        <layer-list>
+            <item android:width="16dp" android:height="16dp"
+                  android:gravity="center_vertical|left"
+                  android:left="8dp" android:right="2dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/sw_thumb_off_disabled"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- On, pressed -->
+    <item android:state_checked="true" android:state_pressed="true">
+        <layer-list>
+            <item android:width="22dp" android:height="22dp"
+                  android:gravity="center_vertical|right" android:right="4dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/sw_thumb_on_pressed"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- On -->
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:width="22dp" android:height="22dp"
+                  android:gravity="center_vertical|right" android:right="4dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/sw_thumb_on"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Off, pressed -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:width="20dp" android:height="20dp"
+                  android:gravity="center_vertical|left" android:left="6dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/sw_thumb_off_pressed"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Off -->
+    <item>
+        <layer-list>
+            <item android:width="16dp" android:height="16dp"
+                  android:gravity="center_vertical|left"
+                  android:left="8dp" android:right="2dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/sw_thumb_off"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

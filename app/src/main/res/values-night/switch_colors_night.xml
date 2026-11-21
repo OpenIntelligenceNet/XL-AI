@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values-night/switch_colors.xml  (dark mode) -->
+<resources>
+    <color name="sw_track_on">#FFFFFF</color>
+    <color name="sw_track_off">#1E1E1E</color>
+    <color name="sw_track_off_stroke">#7A7A7A</color>
+    <color name="sw_track_on_disabled">#4A4A4A</color>
+    <color name="sw_track_off_disabled">#1E1E1E</color>
+    <color name="sw_track_off_disabled_stroke">#3A3A3A</color>
+
+    <color name="sw_thumb_on">#111111</color>
+    <color name="sw_thumb_on_pressed">#3A3A3A</color>
+    <color name="sw_thumb_off">#9A9A9A</color>
+    <color name="sw_thumb_off_pressed">#C4C4C4</color>
+    <color name="sw_thumb_on_disabled">#1E1E1E</color>
+    <color name="sw_thumb_off_disabled">#4A4A4A</color>
+</resources>

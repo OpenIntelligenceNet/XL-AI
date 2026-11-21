@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">XL AI</string>
+    <string name="menu_button_description">Open navigation menu</string>
+    <string name="edit_button_description">Edit or start a new chat</string>
+    <string name="options_button_description">More options</string>
+    <string name="search_label">Search messages</string>
+    <string name="close_search_button_description">Close search bar</string>
+    <string name="image_preview_description">Preview of the selected image</string>
+    <string name="remove_image_button_description">Remove the selected image</string>
+    <string name="close_button_description">Close dialog</string>
+    <string name="attach_button_description">Attach file</string>
+    <string name="model_speed_icon_description">Model speed icon</string>
+    <string name="model_selection_dropdown_description">Select model speed</string>
+   
+    <string name="search_for_chats">Search for chats</string>
+    <string name="new_chat">New chat</string>
+    <string name="try_eva_ai">Experimental LLM </string>
+    <string name="search_icon_description">Search icon</string>
+    <string name="new_chat_icon_description">New chat icon</string>
+    <string name="scroll_to_bottom_description">Scroll to bottom</string>
+    <string name="remove_image_description">Remove attached image</string>
+
+    <string name="back_button_description">Navigate back</string>
+    <string name="eva_ai_icon_description">Eva AI icon</string>
+    <string name="send_button_description">Send message</string>
+
+</resources>
+
+
+    
+    
+    

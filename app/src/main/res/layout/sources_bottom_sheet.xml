@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:background="@drawable/rounded_bottom_sheet_background"
+     android:orientation="vertical"
+     android:paddingTop="8dp">
+
+    <View
+         android:layout_height="4dp"
+         android:layout_width="40dp"
+         android:background="@drawable/rounded_handle"
+         android:layout_marginTop="8dp"
+         android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:paddingEnd="16dp"
+         android:paddingBottom="12dp"
+         android:paddingStart="16dp"
+         android:paddingTop="12dp">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_centerInParent="true"
+             android:textSize="18sp"
+             android:textColor="#000000"
+             android:id="@+id/dialogTitle"
+             android:text="Search Results"
+             android:textStyle="bold" />
+
+        <ImageButton
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:contentDescription="Close"
+             android:src="@drawable/ic_close_black_24dp"
+             android:background="?attr/selectableItemBackgroundBorderless"
+             android:padding="8dp"
+             android:layout_alignParentEnd="true"
+             android:id="@+id/closeButton" />
+
+    </RelativeLayout>
+
+    <View
+         android:layout_height="1dp"
+         android:layout_width="match_parent"
+         android:background="#E0E0E0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:clipToPadding="false"
+         android:id="@+id/sourcesRecyclerView"
+         android:overScrollMode="never" />
+
+</LinearLayout>

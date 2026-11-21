@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_delete_chat"
+        android:title="Delete Chat" />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:title="Settings" />
+  <item
+    android:id="@+id/menu_stop_llm"
+    android:title="Stop Local AI" />
+
+     
+    <item
+        android:id="@+id/menu_temporary_chat"
+        android:title="Temporary Chat (Removed)"
+        android:visible="false" /> 
+</menu>

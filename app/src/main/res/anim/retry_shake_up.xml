@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:fillAfter="false">
+
+    <!-- 1. Shake Left -->
+    <translate
+        android:fromXDelta="0%"
+        android:toXDelta="-5%"
+        android:duration="100" />
+
+    <!-- 2. Shake Right -->
+    <translate
+        android:fromXDelta="-5%"
+        android:toXDelta="5%"
+        android:startOffset="100"
+        android:duration="100" />
+
+    <!-- 3. Shake Center -->
+    <translate
+        android:fromXDelta="5%"
+        android:toXDelta="0%"
+        android:startOffset="200"
+        android:duration="100" />
+
+    <!-- 4. Lift Up -->
+    <translate
+        android:fromYDelta="0%"
+        android:toYDelta="-10%"
+        android:startOffset="300"
+        android:duration="150" />
+
+    <!-- 5. Drop Down -->
+    <translate
+        android:fromYDelta="-10%"
+        android:toYDelta="0%"
+        android:startOffset="450"
+        android:duration="150" />
+
+</set>

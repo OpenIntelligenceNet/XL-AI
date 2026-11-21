@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/switch_style.xml  (keep only ONE file that defines Widget.App.Switch) -->
+<resources>
+    <style name="Widget.App.Switch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:thumb">@drawable/custom_switch_thumb</item>
+        <item name="track">@drawable/custom_switch_track</item>
+        <item name="thumbTint">@null</item>
+        <item name="trackTint">@null</item>
+        <item name="switchMinWidth">52dp</item>
+        <item name="showText">false</item>
+    </style>
+</resources>
+

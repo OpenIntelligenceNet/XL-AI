@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_code_block"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingEnd="8dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:textAppearance="@style/SafeTextAppearance"
+                android:textColor="@color/text_primary"
+                android:layout_alignParentStart="true"
+                android:id="@+id/codeLanguageTextView"
+                android:text="code"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_height="36dp"
+                android:layout_width="36dp"
+                android:contentDescription="Copy code"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_copy"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/text_primary"
+                android:id="@+id/copyButton" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/code_block_divider" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingEnd="16dp"
+            android:fontFamily="monospace"
+            android:paddingBottom="16dp"
+            android:textSize="14sp"
+            android:textAppearance="@style/SafeTextAppearance"
+            android:textColor="@color/text_primary"
+            android:paddingStart="16dp"
+            android:lineSpacingExtra="6dp"
+            android:id="@+id/codeTextView"
+            android:paddingTop="14dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

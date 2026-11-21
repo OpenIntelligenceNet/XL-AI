@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://tools.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/screen_bg"
+     android:orientation="vertical"
+     tools:context=".SystemPromptActivity">
+
+    <androidx.appcompat.widget.Toolbar
+         android:layout_height="?attr/actionBarSize"
+         android:layout_width="match_parent"
+         android:background="@color/screen_bg"
+         app:title="System Prompt Customizer"
+         app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+         app:navigationIcon="?attr/homeAsUpIndicator"
+         app:titleTextColor="@color/text_primary"
+         android:id="@+id/systemPromptToolbar" />
+
+    <ScrollView
+         android:layout_height="0dp"
+         android:layout_width="match_parent"
+         android:fillViewport="true"
+         android:layout_weight="1">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:padding="20dp"
+             android:orientation="vertical">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="8dp"
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textSize="16sp"
+                 android:textColor="@color/text_primary"
+                 android:text="What name should the LLM call you by?"
+                 android:textStyle="bold" />
+
+            <EditText
+                 android:layout_height="54dp"
+                 android:layout_width="match_parent"
+                 android:textSize="15sp"
+                 android:textColor="@color/text_primary"
+                 android:background="@drawable/input_box_background"
+                 android:hint="Enter your name..."
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textColorHint="@color/text_secondary"
+                 android:maxLength="150"
+                 android:maxLines="1"
+                 android:paddingHorizontal="16dp"
+                 android:inputType="textPersonName"
+                 android:id="@+id/etUserNickname" />
+
+            <View
+                 android:layout_height="24dp"
+                 android:layout_width="match_parent" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="8dp"
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textSize="16sp"
+                 android:textColor="@color/text_primary"
+                 android:text="Add System Prompt"
+                 android:textStyle="bold" />
+
+            <EditText
+                 android:layout_height="200dp"
+                 android:layout_width="match_parent"
+                 android:padding="16dp"
+                 android:textSize="15sp"
+                 android:textColor="@color/text_primary"
+                 android:background="@drawable/input_box_background"
+                 android:gravity="top|start"
+                 android:hint="e.g., You are a helpful AI assistant that gives concise answers..."
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textColorHint="@color/text_secondary"
+                 android:maxLength="1500"
+                 android:inputType="textMultiLine"
+                 android:id="@+id/etSystemPrompt" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:gravity="end"
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textSize="12sp"
+                 android:textColor="@color/text_secondary"
+                 android:layout_marginTop="4dp"
+                 android:text="Maximum 1500 characters" />
+
+            <View
+                 android:layout_height="0dp"
+                 android:layout_width="match_parent"
+                 android:minHeight="32dp"
+                 android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                 android:layout_height="44dp"
+                 android:layout_width="match_parent"
+                 android:elevation="0dp"
+                 android:textSize="16sp"
+                 android:stateListAnimator="@null"
+                 android:textColor="@color/btn_submit_text"
+                 android:layout_marginBottom="8dp"
+                 android:background="@drawable/btn_delete_background"
+                 android:backgroundTint="@color/btn_submit_bg"
+                 android:textAllCaps="false"
+                 android:id="@+id/btnSubmitPrompt"
+                 android:text="Save Customizations"
+                 android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                 android:layout_height="44dp"
+                 android:layout_width="match_parent"
+                 android:elevation="0dp"
+                 android:textSize="16sp"
+                 android:stateListAnimator="@null"
+                 android:textColor="@color/btn_remove_text"
+                 android:layout_marginBottom="8dp"
+                 android:background="@drawable/btn_delete_background"
+                 android:backgroundTint="@color/btn_remove_bg"
+                 android:textAllCaps="false"
+                 android:id="@+id/btnDeletePrompt"
+                 android:text="Remove Custom Instructions"
+                 android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

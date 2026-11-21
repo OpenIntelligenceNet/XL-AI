@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:layout_marginBottom="8dp"
+     android:background="@drawable/error_card_background"
+     android:layout_marginHorizontal="16dp"
+     android:padding="16dp"
+     android:orientation="vertical"
+     android:id="@+id/errorCard">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="8dp"
+         android:gravity="center_vertical"
+         android:orientation="horizontal">
+
+        <ImageView
+             android:layout_height="24dp"
+             android:layout_width="24dp"
+             android:src="@drawable/ic_warning"
+             app:tint="@color/text_primary" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textSize="18sp"
+             android:textColor="@color/text_primary"
+             android:layout_marginStart="8dp"
+             android:id="@+id/errorTitle"
+             android:text="Connection Issue"
+             android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         android:textAppearance="@style/SafeTextAppearance"
+         android:textSize="14sp"
+         android:textColor="@color/text_secondary"
+         android:id="@+id/errorText"
+         android:text="Connection failed. Check network connection and try again." />
+
+   <androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/adapterRetryButton"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/retry_button_background"
+    app:backgroundTint="@null"
+    android:stateListAnimator="@null"
+    android:text="↻ Retry"
+    android:textAllCaps="false"
+    android:textColor="@color/retry_btn_text"
+    android:textSize="16sp"
+    android:textStyle="bold" />
+    
+</LinearLayout>

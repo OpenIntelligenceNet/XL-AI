@@ -1,0 +1,24 @@
+# 🏆 SECRETS & KEYSTORES (NEVER UPLOAD)
+*.jks
+*.keystore
+*.keys
+local.properties
+keystore.properties
+
+# 🏆 BUILD ARTIFACTS
+/build
+/app/build
+/captures
+.gradle
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+
+# 🏆 IDE & OS FILES
+.idea/
+.androidide/
+.kotlin/
+*.iml
+.DS_Store
+crash_log.txt

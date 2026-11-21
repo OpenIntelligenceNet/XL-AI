@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_rounded"
+    android:elevation="8dp"
+    android:outlineProvider="background"
+    android:padding="16dp"
+    android:clipToOutline="true">
+
+    <TextView
+        android:id="@+id/tvFullKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textColor="#333333"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        android:maxWidth="280dp" />
+
+</LinearLayout>

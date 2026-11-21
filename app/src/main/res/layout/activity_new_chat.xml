@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="#FAFAFA"
+     android:orientation="vertical"
+     tools:context=".NewChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+         android:layout_height="?attr/actionBarSize"
+         android:layout_width="match_parent"
+         android:background="#FFFFFF"
+         android:elevation="2dp"
+         android:id="@+id/toolbar">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+
+            <ImageButton
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:contentDescription="@string/back_button_description"
+                 android:src="@drawable/ic_back_arrow"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 android:padding="12dp"
+                 android:id="@+id/back_button" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:textSize="20sp"
+                 android:textColor="?android:attr/textColorPrimary"
+                 android:layout_marginStart="16dp"
+                 android:layout_weight="1"
+                 android:text="Experimental AI"
+                 android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+         android:layout_height="0dp"
+         android:layout_width="match_parent"
+         android:background="#FFFFFF"
+         android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:paddingEnd="8dp"
+             android:paddingBottom="400dp"
+             tools:listitem="@layout/chat_item_user"
+             android:clipToPadding="false"
+             android:paddingStart="8dp"
+             android:paddingTop="8dp"
+             android:id="@+id/recyclerView" />
+
+        <ImageButton
+             android:layout_height="48dp"
+             android:layout_width="48dp"
+             android:visibility="gone"
+             android:layout_marginEnd="16dp"
+             android:src="@drawable/ic_arrow_downward"
+             android:elevation="4dp"
+             android:padding="12dp"
+             android:layout_gravity="bottom|end"
+             android:layout_marginBottom="16dp"
+             android:contentDescription="@string/scroll_to_bottom_description"
+             android:background="@drawable/circle_background_white_border"
+             app:tint="?attr/colorPrimary"
+             android:id="@+id/scroll_to_bottom_button" />
+
+        <ProgressBar
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:visibility="gone"
+             android:layout_gravity="center"
+             android:id="@+id/progressBar" />
+
+    </FrameLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="#FFFFFF"
+         android:gravity="center_vertical"
+         android:paddingVertical="8dp"
+         android:orientation="vertical"
+         android:id="@+id/input_container">
+
+        <FrameLayout
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="8dp"
+             android:visibility="gone"
+             android:layout_marginStart="16dp"
+             android:id="@+id/image_preview_container">
+
+            <androidx.cardview.widget.CardView
+                 android:layout_height="100dp"
+                 android:layout_width="100dp"
+                 app:cardElevation="2dp"
+                 app:cardCornerRadius="8dp">
+
+                <ImageView
+                     android:layout_height="match_parent"
+                     android:layout_width="match_parent"
+                     android:scaleType="centerCrop"
+                     android:contentDescription="@string/image_preview_description"
+                     android:id="@+id/image_preview" />
+
+                <ImageButton
+                     android:layout_height="32dp"
+                     android:layout_width="32dp"
+                     android:layout_marginEnd="-8dp"
+                     android:src="@drawable/ic_close"
+                     android:contentDescription="@string/remove_image_description"
+                     android:background="@drawable/circle_background_red"
+                     android:padding="6dp"
+                     app:tint="@android:color/white"
+                     android:layout_marginTop="-8dp"
+                     android:id="@+id/remove_image_button"
+                     android:layout_gravity="top|end" />
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:paddingEnd="8dp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal"
+             android:paddingStart="8dp">
+
+            <ImageButton
+                 android:layout_height="40dp"
+                 android:layout_width="40dp"
+                 android:layout_marginEnd="8dp"
+                 android:contentDescription="@string/attach_button_description"
+                 android:src="@drawable/ic_attach"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 android:padding="8dp"
+                 app:tint="?attr/colorPrimary"
+                 android:id="@+id/attach_button"
+                 android:layout_gravity="center_vertical" />
+
+            <androidx.cardview.widget.CardView
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 app:cardElevation="0dp"
+                 app:cardUseCompatPadding="false"
+                 app:cardBackgroundColor="@android:color/white"
+                 app:cardCornerRadius="28dp"
+                 android:layout_weight="1">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:background="@drawable/rounded_eddittext_background"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingStart="16dp">
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="0dp"
+                         android:orientation="vertical"
+                         android:layout_weight="1">
+
+                        <FrameLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="match_parent"
+                             android:visibility="gone"
+                             android:layout_marginTop="4dp"
+                             android:id="@+id/search_pill_wrapper">
+
+                            <LinearLayout
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:layout_marginBottom="4dp"
+                                 android:paddingEnd="8dp"
+                                 android:gravity="center_vertical"
+                                 android:background="@drawable/rounded_search_pill_background"
+                                 android:paddingVertical="4dp"
+                                 android:orientation="horizontal"
+                                 android:paddingStart="12dp">
+
+                                <ImageView
+                                     android:layout_height="20dp"
+                                     android:layout_width="20dp"
+                                     android:src="@drawable/ic_globe"
+                                     android:contentDescription="@string/search_icon_description"
+                                     android:layout_marginEnd="4dp"
+                                     app:tint="?attr/colorPrimary" />
+
+                                <TextView
+                                     android:layout_height="wrap_content"
+                                     android:layout_width="wrap_content"
+                                     android:layout_marginEnd="8dp"
+                                     android:textSize="16sp"
+                                     android:textColor="?attr/colorPrimary"
+                                     android:text="@string/search_label"
+                                     android:textStyle="bold" />
+
+                                <ImageButton
+                                     android:layout_height="20dp"
+                                     android:layout_width="20dp"
+                                     android:src="@drawable/ic_close"
+                                     android:contentDescription="@string/close_search_button_description"
+                                     android:background="@null"
+                                     app:tint="?attr/colorPrimary"
+                                     android:id="@+id/close_search_pill_button" />
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                        <EditText
+                             android:layout_height="wrap_content"
+                             android:layout_width="match_parent"
+                             android:textColor="?android:attr/textColorPrimary"
+                             android:paddingStart="0dp"
+                             android:paddingEnd="0dp"
+                             android:background="@null"
+                             android:hint="Write your message..."
+                             android:minHeight="42dp"
+                             android:textColorHint="?android:attr/textColorSecondary"
+                             android:paddingBottom="12dp"
+                             android:maxLines="5"
+                             android:inputType="textCapSentences|textMultiLine"
+                             android:id="@+id/inputMessage"
+                             android:paddingTop="12dp" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                         android:layout_height="40dp"
+                         android:layout_width="40dp"
+                         android:contentDescription="@string/send_button_description"
+                         android:src="@drawable/ic_send_arrow"
+                         android:layout_marginEnd="8dp"
+                         android:background="@drawable/circle_background_send_button"
+                         android:padding="8dp"
+                         app:tint="@android:color/white"
+                         android:enabled="false"
+                         android:layout_marginStart="8dp"
+                         android:id="@+id/send_message_button" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

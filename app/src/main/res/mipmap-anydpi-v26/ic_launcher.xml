@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 1. Use Android's built-in pure black for the background layer -->
+    <background android:drawable="@android:color/black" />
+    
+    <!-- 2. Shrink the transparent XL logo by 24% so it stays perfectly centered and away from the edges -->
+    <foreground>
+        <inset android:drawable="@drawable/ic_launcher_foreground" 
+               android:inset="24%" />
+    </foreground>
+</adaptive-icon>

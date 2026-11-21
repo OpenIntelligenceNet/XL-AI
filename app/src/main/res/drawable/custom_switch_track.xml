@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/custom_switch_track.xml
+     52x32dp. 2dp stroke in every state so the track never changes size. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false" android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sw_track_on_disabled"/>
+            <stroke android:width="2dp" android:color="@color/sw_track_on_disabled"/>
+            <corners android:radius="16dp"/>
+            <size android:width="52dp" android:height="32dp"/>
+        </shape>
+    </item>
+
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sw_track_off_disabled"/>
+            <stroke android:width="2dp" android:color="@color/sw_track_off_disabled_stroke"/>
+            <corners android:radius="16dp"/>
+            <size android:width="52dp" android:height="32dp"/>
+        </shape>
+    </item>
+
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sw_track_on"/>
+            <stroke android:width="2dp" android:color="@color/sw_track_on"/>
+            <corners android:radius="16dp"/>
+            <size android:width="52dp" android:height="32dp"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sw_track_off"/>
+            <stroke android:width="2dp" android:color="@color/sw_track_off_stroke"/>
+            <corners android:radius="16dp"/>
+            <size android:width="52dp" android:height="32dp"/>
+        </shape>
+    </item>
+</selector>

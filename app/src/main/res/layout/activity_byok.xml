@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://tools.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/screen_bg"
+     android:orientation="vertical"
+     tools:context=".BYOKActivity">
+
+    <androidx.appcompat.widget.Toolbar
+         android:layout_height="?attr/actionBarSize"
+         android:layout_width="match_parent"
+         android:background="@color/screen_bg"
+         app:title="BYOK"
+         app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+         
+         app:titleTextColor="@color/text_primary"
+         android:id="@+id/byokToolbar">
+
+        <ImageView
+             android:layout_height="40dp"
+             android:layout_width="40dp"
+             android:layout_marginEnd="12dp"
+             android:src="@drawable/ic_add"
+             android:contentDescription="Add Custom Provider"
+             android:background="?attr/selectableItemBackgroundBorderless"
+             app:tint="@color/text_primary"
+             android:id="@+id/btnAddToolbarCustom"
+             android:layout_gravity="end|center_vertical" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+         android:layout_height="0dp"
+         android:layout_width="match_parent"
+         android:fillViewport="true"
+         android:layout_weight="1"
+         android:id="@+id/mainScrollView">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:padding="16dp"
+             android:orientation="vertical">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="16dp"
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textSize="14sp"
+                 android:textColor="@color/text_secondary"
+                 android:text="Bring your own free API key to accumulate more limits" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="8dp"
+                 android:gravity="center_vertical"
+                 android:background="?attr/selectableItemBackground"
+                 android:clickable="true"
+                 android:paddingVertical="8dp"
+                 android:orientation="horizontal"
+                 android:focusable="true"
+                 android:id="@+id/providersHeader">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textAppearance="@style/SafeTextAppearance"
+                     android:textSize="16sp"
+                     android:textColor="@color/text_primary"
+                     android:text="Supported Providers"
+                     android:textStyle="bold" />
+
+                <ImageView
+                     android:layout_height="24dp"
+                     android:layout_width="24dp"
+                     android:src="@drawable/ic_chevron_right"
+                     app:tint="@color/icon_secondary"
+                     android:layout_marginStart="4dp"
+                     android:id="@+id/ivProvidersToggle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:visibility="gone"
+                 android:layout_marginBottom="24dp"
+                 android:orientation="vertical"
+                 android:id="@+id/providersListContainer">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_openai"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="OpenAI" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_anthropic"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="Anthropic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_google"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="Google AI Studio" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_openrouter"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="OpenRouter" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_spcxai"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="xAI" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_deepseek"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="DeepSeek" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_groq"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="Groq" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_mistral_ai"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="Mistral" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_nvidia_logo"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="Nvidia" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_together"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="Together AI" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:paddingBottom="6dp"
+                     android:paddingTop="6dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/ic_unknown"
+                         android:layout_marginEnd="12dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_body"
+                         android:text="Unknown Provider" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="24dp"
+                 android:background="@drawable/bg_model_download_outline"
+                 android:clickable="true"
+                 android:paddingVertical="16dp"
+                 android:paddingHorizontal="12dp"
+                 android:focusable="true"
+                 android:id="@+id/btnAddApiKey">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:textAppearance="@style/SafeTextAppearance"
+                     android:textSize="16sp"
+                     android:textColor="@color/text_body"
+                     android:layout_alignParentStart="true"
+                     android:text="Add API Key" />
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:gravity="center_vertical"
+                     android:layout_centerVertical="true"
+                     android:orientation="horizontal"
+                     android:layout_alignParentEnd="true">
+
+                    <ImageView
+                         android:layout_height="24dp"
+                         android:layout_width="24dp"
+                         android:src="@drawable/ic_add"
+                         android:contentDescription="Add API key"
+                         android:layout_marginEnd="16dp"
+                         app:tint="@color/icon_secondary"
+                         android:id="@+id/ivAddIcon" />
+
+                    <ImageView
+                         android:layout_height="24dp"
+                         android:layout_width="24dp"
+                         android:src="@drawable/ic_chevron_right"
+                         android:contentDescription="Toggle Keys List"
+                         app:tint="@color/icon_secondary"
+                         android:id="@+id/ivExpandToggle" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:visibility="gone"
+                 android:layout_marginBottom="24dp"
+                 android:nestedScrollingEnabled="false"
+                 android:focusable="false"
+                 android:id="@+id/recyclerApiKeys" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="32dp"
+                 android:orientation="vertical"
+                 android:id="@+id/customProvidersContainer">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

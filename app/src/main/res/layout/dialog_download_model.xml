@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:background="@drawable/bg_dialog_rounded"
+     android:padding="24dp"
+     android:orientation="vertical">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="16dp"
+         android:textSize="24sp"
+         android:textColor="#303234"
+         android:id="@+id/dialog_title"
+         android:text="Download Model" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="24dp"
+         android:textSize="14sp"
+         android:textColor="#737270"
+         android:id="@+id/dialog_message"
+         android:text="Paste the HuggingFace model download link here to download model" />
+
+    <com.google.android.material.textfield.TextInputLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="12dp"
+         app:hintEnabled="false"
+         app:boxStrokeColor="@color/box_stroke_color_selector"
+         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:hint="https://huggingface.co/.../model.gguf"
+             android:padding="16dp"
+             android:textColor="#737270"
+             android:textCursorDrawable="@null"
+             android:inputType="text"
+             android:id="@+id/dialog_input" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="12dp"
+         android:textSize="14sp"
+         android:textColor="#303234"
+         app:buttonTint="#A8C7FA"
+         android:id="@+id/checkbox_vision_support"
+         android:text="Enable Vision Support (.mmproj)" />
+
+    <com.google.android.material.textfield.TextInputLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="24dp"
+         android:visibility="gone"
+         app:hintEnabled="false"
+         app:boxStrokeColor="@color/box_stroke_color_selector"
+         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+         android:id="@+id/layout_mmproj_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:hint="https://huggingface.co/.../vision.mmproj"
+             android:padding="16dp"
+             android:textColor="#737270"
+             android:textCursorDrawable="@null"
+             android:inputType="text"
+             android:id="@+id/dialog_input_mmproj" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:visibility="gone"
+         android:layout_marginBottom="24dp"
+         android:orientation="vertical"
+         android:id="@+id/layout_download_progress">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="4dp"
+             android:textSize="14sp"
+             android:textColor="#303234"
+             android:id="@+id/text_progress_gguf"
+             android:text="Downloading Text Model (0%)"
+             android:textStyle="bold" />
+
+        <ProgressBar
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp"
+             android:progressTint="#A8C7FA"
+             style="?android:attr/progressBarStyleHorizontal"
+             android:id="@+id/progress_bar_gguf" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:visibility="gone"
+             android:layout_marginBottom="4dp"
+             android:textSize="14sp"
+             android:textColor="#737270"
+             android:id="@+id/text_progress_mmproj"
+             android:text="Waiting for Vision Model..." />
+
+        <ProgressBar
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:visibility="gone"
+             android:progressTint="#A8C7FA"
+             style="?android:attr/progressBarStyleHorizontal"
+             android:id="@+id/progress_bar_mmproj" />
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="end"
+         android:orientation="horizontal">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:background="?attr/selectableItemBackground"
+             android:clickable="true"
+             android:paddingVertical="8dp"
+             android:textSize="14sp"
+             android:fontFamily="sans-serif-medium"
+             android:textColor="#A8C7FA"
+             android:paddingHorizontal="16dp"
+             android:focusable="true"
+             android:id="@+id/btn_cancel"
+             android:text="Cancel" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:clickable="true"
+             android:textSize="14sp"
+             android:textColor="#A8C7FA"
+             android:layout_marginStart="8dp"
+             android:focusable="true"
+             android:background="?attr/selectableItemBackground"
+             android:paddingVertical="8dp"
+             android:fontFamily="sans-serif-medium"
+             android:paddingHorizontal="16dp"
+             android:id="@+id/btn_download"
+             android:text="Download" />
+
+    </LinearLayout>
+
+</LinearLayout>

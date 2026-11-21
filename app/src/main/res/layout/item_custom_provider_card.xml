@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:layout_marginBottom="16dp"
+     android:background="@drawable/bg_custom_provider_card"
+     android:orientation="vertical">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="center_vertical"
+         android:background="?attr/selectableItemBackground"
+         android:clickable="true"
+         android:paddingVertical="18dp"
+         android:orientation="horizontal"
+         android:paddingHorizontal="20dp"
+         android:focusable="true"
+         android:id="@+id/cardHeader">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textSize="16sp"
+             android:textColor="@color/text_primary"
+             android:layout_weight="1"
+             android:text="Custom provider" />
+
+        <ImageView
+             android:layout_height="24dp"
+             android:layout_width="24dp"
+             android:src="@drawable/ic_chevron_right"
+             app:tint="@color/text_primary"
+             android:id="@+id/ivCardToggle" />
+
+    </LinearLayout>
+
+    <View
+         android:layout_height="1dp"
+         android:layout_width="match_parent"
+         android:visibility="gone"
+         android:background="@color/divider_color"
+         android:id="@+id/cardDivider" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:visibility="gone"
+         android:orientation="vertical"
+         android:paddingBottom="20dp"
+         android:paddingHorizontal="16dp"
+         android:id="@+id/cardContent"
+         android:paddingTop="16dp">
+
+        <EditText
+             android:layout_height="52dp"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp"
+             android:background="@drawable/bg_custom_input_white"
+             android:hint="Name (optional)"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textColorHint="@color/text_secondary"
+             android:textSize="15sp"
+             android:textColor="@color/text_primary"
+             android:paddingHorizontal="16dp"
+             android:inputType="text"
+             android:id="@+id/etCustomName" />
+
+        <EditText
+             android:layout_height="52dp"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp"
+             android:background="@drawable/bg_custom_input_white"
+             android:hint="http://192.168.1.10:1337/v1"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textColorHint="@color/text_secondary"
+             android:textSize="15sp"
+             android:textColor="@color/text_primary"
+             android:paddingHorizontal="16dp"
+             android:inputType="textUri"
+             android:id="@+id/etCustomUrl" />
+
+        <EditText
+             android:layout_height="52dp"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp"
+             android:background="@drawable/bg_custom_input_white"
+             android:hint="API key (optional)"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textColorHint="@color/text_secondary"
+             android:textSize="15sp"
+             android:textColor="@color/text_primary"
+             android:paddingHorizontal="16dp"
+             android:inputType="textPassword"
+             android:id="@+id/etCustomApiKey" />
+
+        <EditText
+             android:layout_height="52dp"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="16dp"
+             android:background="@drawable/bg_custom_input_white"
+             android:hint="Model name (optional, e.g. llama3)"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textColorHint="@color/text_secondary"
+             android:textSize="15sp"
+             android:textColor="@color/text_primary"
+             android:paddingHorizontal="16dp"
+             android:inputType="text"
+             android:id="@+id/etCustomModel" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="20dp"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textSize="13sp"
+             android:textColor="@color/text_secondary"
+             android:lineSpacingExtra="4dp"
+             android:text="Use this for an OpenAI-compatible local server, or an external provider base URL." />
+
+        <LinearLayout
+             android:layout_height="52dp"
+             android:layout_width="match_parent"
+             android:background="@drawable/bg_delete_provider_btn"
+             android:gravity="center"
+             android:clickable="true"
+             android:orientation="horizontal"
+             android:focusable="true"
+             android:id="@+id/btnDeleteProvider">
+
+            <ImageView
+                 android:layout_height="20dp"
+                 android:layout_width="20dp"
+                 android:src="@drawable/ic_delete"
+                 android:layout_marginEnd="8dp"
+                 app:tint="@color/delete_btn_text" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textSize="16sp"
+                 android:textColor="@color/delete_btn_text"
+                 android:text="Delete provider" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

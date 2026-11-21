@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:background="@drawable/rounded_bottom_sheet_background"
+     android:orientation="vertical"
+     android:paddingBottom="31dp"
+     android:clipToPadding="false">
+
+    <View
+         android:layout_height="4dp"
+         android:layout_width="40dp"
+         android:layout_marginBottom="16dp"
+         android:background="@color/sheet_drag_handle"
+         android:layout_marginTop="12dp"
+         android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:paddingBottom="16dp"
+         android:paddingHorizontal="20dp">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textSize="20sp"
+             android:textColor="@color/text_primary"
+             android:text="Model"
+             android:textStyle="bold" />
+
+        <ImageView
+             android:layout_height="24dp"
+             android:layout_width="24dp"
+             android:src="@drawable/ic_close"
+             android:background="?attr/selectableItemBackgroundBorderless"
+             android:layout_centerVertical="true"
+             app:tint="@color/text_primary"
+             android:layout_alignParentEnd="true"
+             android:id="@+id/btnCloseSheet" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+         android:layout_height="48dp"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         android:background="@drawable/bg_tab_container"
+         android:layout_marginHorizontal="20dp"
+         android:padding="4dp"
+         android:orientation="horizontal">
+
+        <TextView
+             android:layout_height="match_parent"
+             android:layout_width="0dp"
+             android:gravity="center"
+             android:background="@drawable/bg_tab_selected"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textColor="@color/text_primary"
+             android:layout_weight="1"
+             android:id="@+id/tabDefault"
+             android:text="Default"
+             android:textStyle="bold" />
+
+        <TextView
+             android:layout_height="match_parent"
+             android:layout_width="0dp"
+             android:gravity="center"
+             android:background="?attr/selectableItemBackground"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textColor="@color/text_secondary"
+             android:layout_weight="1"
+             android:id="@+id/tabLocal"
+             android:text="Local" />
+
+        <TextView
+             android:layout_height="match_parent"
+             android:layout_width="0dp"
+             android:gravity="center"
+             android:background="?attr/selectableItemBackground"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:textColor="@color/text_secondary"
+             android:layout_weight="1"
+             android:id="@+id/tabCloud"
+             android:text="Cloud" />
+
+    </LinearLayout>
+
+    <ScrollView
+         android:layout_height="0dp"
+         android:layout_width="match_parent"
+         android:maxHeight="400dp"
+         android:layout_weight="1">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:id="@+id/modelsListContainer">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+         android:layout_height="48dp"
+         android:layout_width="match_parent"
+         android:elevation="0dp"
+         android:textSize="15sp"
+         android:stateListAnimator="@null"
+         android:textColor="@color/text_primary"
+         android:layout_marginTop="16dp"
+         android:background="@drawable/bg_button_pill"
+         android:textAppearance="@style/SafeTextAppearance"
+         android:layout_marginHorizontal="20dp"
+         android:textAllCaps="false"
+         android:id="@+id/btnAction"
+         android:text="Add Provider" />
+
+</LinearLayout>

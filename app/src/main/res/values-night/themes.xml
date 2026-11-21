@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <!-- Status Bar for Dark Mode -->
+        <item name="android:statusBarColor">@color/screen_bg</item> 
+        <item name="android:windowLightStatusBar">false</item> 
+        
+        <!-- Navigation Bar for Dark Mode -->
+        <item name="android:navigationBarColor">@color/screen_bg</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <!-- Must include these so the app doesn't crash -->
+    <style name="AppTheme" parent="Base.AppTheme" />
+
+    <style name="SafeTextAppearance" parent="android:TextAppearance">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+</resources>

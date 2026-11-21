@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:paddingBottom="8dp"
+     android:paddingTop="8dp">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginEnd="8dp"
+         android:paddingEnd="16dp"
+         android:background="@color/screen_bg"
+         android:orientation="vertical"
+         android:paddingBottom="12dp"
+         android:paddingStart="16dp"
+         android:layout_marginStart="8dp"
+         android:layout_gravity="fill_horizontal"
+         android:paddingTop="12dp">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="8dp"
+             android:visibility="gone"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:includeFontPadding="false"
+             android:textSize="26sp"
+             android:textColor="@color/text_primary"
+             android:textIsSelectable="true"
+             android:id="@+id/aiHeading"
+             android:textStyle="bold" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:id="@+id/aiMessageContainer">
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:visibility="gone"
+             android:gravity="end|center_vertical"
+             android:orientation="horizontal"
+             android:layout_marginTop="10dp"
+             android:id="@+id/aiActionsLayout">
+
+            <ImageButton
+                 android:layout_height="36dp"
+                 android:layout_width="36dp"
+                 android:layout_marginEnd="8dp"
+                 android:scaleType="fitCenter"
+                 android:src="@drawable/ic_copy"
+                 android:contentDescription="Copy Text"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 app:tint="@color/text_secondary"
+                 android:padding="8dp"
+                 android:id="@+id/btnCopy" />
+
+            <ImageButton
+                 android:layout_height="36dp"
+                 android:layout_width="36dp"
+                 android:layout_marginEnd="8dp"
+                 android:scaleType="fitCenter"
+                 android:src="@drawable/ic_regenerate"
+                 android:contentDescription="Regenerate Response"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 app:tint="@color/text_secondary"
+                 android:padding="8dp"
+                 android:id="@+id/btnRegenerate" />
+
+            <ImageButton
+                 android:layout_height="36dp"
+                 android:layout_width="36dp"
+                 android:layout_marginEnd="8dp"
+                 android:scaleType="fitCenter"
+                 android:src="@drawable/ic_share"
+                 android:contentDescription="Share Text"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 app:tint="@color/text_secondary"
+                 android:padding="8dp"
+                 android:id="@+id/btnShare" />
+
+            <ImageButton
+                 android:layout_height="36dp"
+                 android:layout_width="36dp"
+                 android:scaleType="fitCenter"
+                 android:src="@drawable/ic_play"
+                 android:contentDescription="Listen Aloud"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 app:tint="@color/text_secondary"
+                 android:padding="6dp"
+                 android:id="@+id/btnTtsPlayPause" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

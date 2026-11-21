@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="text_primary">#E6E1E5</color>
+<color name="text_secondary">#CAC4D0</color>
+   <color name="provider_card_bg">#1E1E1E</color>
+    <color name="custom_input_bg">#2A2A2A</color>
+    <color name="custom_input_stroke">#3A3A3A</color>
+    <color name="delete_btn_bg">#3A2424</color>
+    <color name="delete_btn_text">#FF8A80</color>
+    
+   <color name="screen_bg">#000000</color>
+<color name="toolbar_bg">#1E1E1E</color>
+<color name="text_body">#CAC4D0</color>
+<color name="icon_secondary">#A0A0A0</color>
+<color name="add_key_btn_bg">#2A2A2A</color>
+   
+  <!-- Submit/Save Button (White bg, Black text so it's readable) -->
+<color name="btn_submit_bg">#FFFFFF</color>
+<color name="btn_submit_text">#000000</color>
+
+<!-- Remove Button (Soft reddish-pink for dark mode) -->
+<color name="btn_remove_bg">#ED5E7A</color> <!-- Soft dark pink bg -->
+<color name="btn_remove_text">#FFFFFF</color> <!-- Soft pink text -->
+
+   
+  <!-- We defined this in the last step! -->
+<color name="retry_btn_bg">#FFFFFF</color>
+<color name="retry_btn_text">#000000</color>
+   <!-- Typing Indicator -->
+    
+<color name="typing_bubble_bg">#1E1E1E</color> <!-- Dark grey bubble -->
+<color name="typing_dot_color">#E6E1E5</color> <!-- Soft white dots -->
+    
+    
+   <!-- Main Activity Chat Colors -->
+<color name="chat_input_bg">#1E1E1E</color> <!-- Matches the dark theme -->
+<color name="edit_pill_text">#90CAF9</color> <!-- Very light blue -->
+<color name="send_button_bg">#90CAF9</color>
+<color name="send_button_icon">#121212</color> <!-- Dark icon for the light blue button -->
+<color name="circle_remove_bg">#3A3A3A</color>
+    <color name="chat_input_stroke">#3A3A3A</color>
+    <!-- Brand Blue (lighter for dark mode so it pops) -->
+<color name="brand_blue">#64B5F6</color>
+
+   <!-- Chat Interface Colors -->
+<color name="edit_pill_bg">#2A2A2A</color> <!-- Dark grey pill -->
+<color name="chat_btn_active_bg">#333333</color> <!-- Dark grey button to match reference -->
+<color name="chat_btn_disabled_bg">#1E1E1E</color> <!-- Darker grey for disabled -->
+    
+<!-- Model Card Background -->
+<color name="model_card_bg">#1E1E1E</color> <!-- Matches your other dark cards -->
+<color name="model_card_stroke">#3A3A3A</color>
+
+<!-- Progress Bar Background -->
+<color name="progress_track">#333333</color>
+ 
+   <!-- Skeleton Loader Colors (Dark Mode) -->
+<color name="skeleton_title">#2A2A2A</color>
+<color name="skeleton_text">#1E1E1E</color>
+<!-- Search Bar Background (Dark Mode) -->
+<color name="search_bar_bg">#2A2A2A</color>
+ 
+   <color name="drawer_scrim">#33FFFFFF</color>
+<color name="send_btn_active_bg">#FFFFFF</color>    <!-- Soft white when typing -->
+<color name="send_btn_active_icon">#000000</color>  <!-- Black arrow -->
+<color name="send_btn_disabled_bg">#3A3A3A</color>  <!-- Dark grey circle when empty -->
+<color name="send_btn_disabled_icon">#888888</color><!-- Dim arrow -->
+    
+   <!-- Selected Chat Item Background -->
+<color name="chat_item_selected_bg">#2A2A2A</color>
+    
+   <!-- Code Block Colors -->
+<color name="code_block_bg">#1E1E1E</color> <!-- Matches your dark cards -->
+<color name="code_block_divider">#3A3A3A</color> <!-- Subtle dark divider -->
+    
+   <!-- Bottom Sheet Colors -->
+
+<color name="sheet_drag_handle">#3A3A3A</color>
+<color name="tab_container_bg">#121212</color> <!-- Darker than the sheet bg -->
+<color name="tab_selected_bg">#2A2A2A</color>
+<color name="button_pill_bg">#2A2A2A</color>
+<color name="tab_selected_stroke">#3A3A3A</color>
+<color name="check_circle_green">#81C784</color>
+    
+   
+    
+<color name="style_button_bg">#2A2A2A</color>
+<color name="experimental_tag_bg">#1E3A5F</color> <!-- A nice muted dark blue -->
+<color name="progress_tint_pink">#FF80AB</color> <!-- Softer pink for dark mode -->
+    
+    
+   <!-- Bottom Sheet & Settings Backgrounds -->
+
+ <color name="user_bubble_bg">#2A2A2A</color> 
+
+
+     <!-- Professional Switch Colors (Dark Mode) -->
+<color name="switch_thumb_checked">#121212</color>     <!-- Dark thumb when ON -->
+<color name="switch_thumb_unchecked">#888888</color>   <!-- Grey thumb when OFF -->
+<color name="switch_track_checked">#E8EAED</color>     <!-- Light grey track when ON -->
+<color name="switch_track_unchecked">#444444</color>   <!-- Dark grey track when OFF -->
+  <!-- System Prompt Activity Inputs -->
+<color name="prompt_input_bg">#1E1E1E</color>
+<color name="prompt_input_stroke">#3A3A3A</color>
+    
+   <color name="input_stroke_focused">#A8C7FA</color>
+<color name="input_stroke_unfocused">#9AA0A0</color>
+<color name="dialog_bg">#1E1E1E</color>
+<color name="dialog_title_text">#E6E1E5</color>
+<color name="dialog_body_text">#CAC4D0</color>
+<color name="dialog_input_text">#E6E1E5</color>
+<color name="dialog_warning_text">#FF8A80</color>
+<color name="dialog_action_text">#A8C7FA</color>
+<color name="add_key_btn_stroke">#3A3A3A</color>  <!-- new -->
+    
+   <!-- Dark mode groups -->
+<color name="settings_group_bg">#121212</color>
+<color name="advanced_options_bg">#121212</color>
+
+    <color name="divider_different">#3A3A3A</color>
+<!-- Dark mode divider -->
+<color name="divider_color">#1E1E1E</color>
+
+<!-- Sheet Background: User requested #121212 -->
+<color name="sheet_bg">#1E1E1E</color>
+    
+    
+</resources>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    

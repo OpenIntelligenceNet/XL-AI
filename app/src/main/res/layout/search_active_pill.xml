@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:paddingEnd="8dp"
+     android:background="@drawable/rounded_search_pill_background"
+     android:gravity="center_vertical"
+     android:orientation="horizontal"
+     android:paddingBottom="6dp"
+     android:paddingStart="12dp"
+     android:id="@+id/search_pill_container"
+     android:paddingTop="6dp">
+
+    <ImageView
+         android:layout_height="18dp"
+         android:layout_width="18dp"
+         android:src="@drawable/ic_globe"
+         android:contentDescription="Search Icon" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:textSize="16sp"
+         android:fontFamily="sans-serif-medium"
+         android:textColor="#2196F3"
+         android:layout_marginStart="8dp"
+         android:text="Search" />
+
+    <ImageView
+         android:layout_height="20dp"
+         android:layout_width="20dp"
+         android:src="@drawable/ic_close_blue"
+         android:contentDescription="Close Search"
+         android:clickable="true"
+         android:layout_marginStart="8dp"
+         android:focusable="true"
+         android:id="@+id/search_pill_close" />
+
+</LinearLayout>

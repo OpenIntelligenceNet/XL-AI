@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:layout_marginBottom="4dp"
+     android:orientation="vertical"
+     android:layout_marginTop="4dp">
+
+    <ImageView
+         android:layout_height="150dp"
+         android:layout_width="150dp"
+         android:layout_marginBottom="8dp"
+         android:visibility="gone"
+         android:layout_marginEnd="8dp"
+         android:scaleType="centerCrop"
+         android:adjustViewBounds="true"
+         android:contentDescription="Uploaded Image"
+         android:layout_marginStart="60dp"
+         android:id="@+id/userImage"
+         android:layout_gravity="end" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginEnd="8dp"
+         android:padding="10dp"
+         android:textSize="16sp"
+         android:textColor="@color/text_primary"
+         android:layout_marginStart="60dp"
+         android:textIsSelectable="false"
+         android:layout_gravity="end"
+         android:background="@drawable/bg_user_bubble"
+         android:textAppearance="@style/SafeTextAppearance"
+         android:maxWidth="280dp"
+         android:id="@+id/userMessage"
+         android:text="Your message goes here." />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:visibility="gone"
+         android:layout_marginEnd="12dp"
+         android:gravity="center_vertical"
+         android:orientation="horizontal"
+         android:layout_marginTop="2dp"
+         android:id="@+id/sendingStatusContainer"
+         android:layout_gravity="end">
+
+        <ProgressBar
+             android:layout_height="16dp"
+             android:layout_width="16dp"
+             android:layout_marginEnd="4dp"
+             android:indeterminate="true"
+             style="?android:attr/progressBarStyleSmall"
+             android:id="@+id/sendingProgressBar" />
+
+    </LinearLayout>
+
+</LinearLayout>

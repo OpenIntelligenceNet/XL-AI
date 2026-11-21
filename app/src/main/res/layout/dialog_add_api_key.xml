@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:background="@drawable/bg_dialog_rounded"
+     android:padding="24dp"
+     android:orientation="vertical">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="16dp"
+         android:textAppearance="@style/SafeTextAppearance"
+         android:textSize="24sp"
+         android:textColor="@color/dialog_title_text"
+         android:id="@+id/dialog_title"
+         android:text="Add API Key" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="24dp"
+         android:textAppearance="@style/SafeTextAppearance"
+         android:textSize="14sp"
+         android:textColor="@color/dialog_body_text"
+         android:id="@+id/dialog_message"
+         android:text="Paste your provider's API key below to unlock higher rate limits." />
+
+    <com.google.android.material.textfield.TextInputLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="8dp"
+         app:hintEnabled="false"
+         app:boxStrokeColor="@color/box_stroke_color_selector"
+         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:hint="sk-... or paste your API key"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:padding="16dp"
+             android:textColorHint="@color/dialog_body_text"
+             android:textColor="@color/dialog_input_text"
+             android:textCursorDrawable="@null"
+             android:inputType="text"
+             android:id="@+id/dialog_input" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="24dp"
+         android:textAppearance="@style/SafeTextAppearance"
+         android:textSize="12sp"
+         android:textColor="@color/dialog_warning_text"
+         android:text="Make sure to add correct key, otherwise it may result in error." />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="end"
+         android:orientation="horizontal">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:clickable="true"
+             android:textSize="14sp"
+             android:textColor="@color/dialog_action_text"
+             android:focusable="true"
+             android:background="?attr/selectableItemBackground"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:paddingVertical="8dp"
+             android:fontFamily="sans-serif-medium"
+             android:paddingHorizontal="16dp"
+             android:id="@+id/btn_cancel"
+             android:text="Cancel" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:clickable="true"
+             android:textSize="14sp"
+             android:textColor="@color/dialog_action_text"
+             android:layout_marginStart="8dp"
+             android:focusable="true"
+             android:background="?attr/selectableItemBackground"
+             android:textAppearance="@style/SafeTextAppearance"
+             android:paddingVertical="8dp"
+             android:fontFamily="sans-serif-medium"
+             android:paddingHorizontal="16dp"
+             android:id="@+id/btn_save"
+             android:text="Save" />
+
+    </LinearLayout>
+
+</LinearLayout>

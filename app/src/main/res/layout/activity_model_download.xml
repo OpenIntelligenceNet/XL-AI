@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/screen_bg">
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:orientation="vertical">
+
+        <FrameLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:padding="20dp">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:textSize="26sp"
+                 android:textColor="@color/text_primary"
+                 android:text="Local LLMs"
+                 android:textStyle="bold" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:clickable="true"
+                 android:padding="8dp"
+                 android:textSize="14sp"
+                 android:textColor="@color/brand_blue"
+                 android:focusable="true"
+                 android:layout_gravity="end"
+                 android:foreground="?attr/selectableItemBackground"
+                 android:textAppearance="@style/SafeTextAppearance"
+                 android:id="@+id/skip_button"
+                 android:text="Skip for now"
+                 android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <ScrollView
+             android:layout_height="match_parent"
+             android:layout_width="match_parent">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:padding="22dp"
+                 android:orientation="vertical">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:background="@drawable/bg_experimental_tag"
+                     android:textAppearance="@style/SafeTextAppearance"
+                     android:paddingVertical="4dp"
+                     android:textSize="12sp"
+                     android:textColor="@color/brand_blue"
+                     android:paddingHorizontal="12dp"
+                     android:text="EXPERIMENTAL"
+                     android:textStyle="bold" />
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="vertical"
+                     android:layout_marginTop="16dp">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textColor="@color/text_secondary"
+                         android:text="• No internet needed" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textColor="@color/text_secondary"
+                         android:text="• Fast and unlimited" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textColor="@color/text_secondary"
+                         android:text="• Download once and use forever" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textColor="@color/text_secondary"
+                         android:text="• Better Privacy and Freedom" />
+
+                </LinearLayout>
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textAppearance="@style/SafeTextAppearance"
+                     android:textSize="16sp"
+                     android:textColor="@color/text_primary"
+                     android:layout_marginTop="24dp"
+                     android:text="Recommended model"
+                     android:textStyle="bold" />
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="vertical"
+                     android:id="@+id/model_cards_container">
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:background="@drawable/bg_model_card"
+                         android:padding="16dp"
+                         android:orientation="vertical"
+                         android:layout_marginTop="12dp">
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="18sp"
+                             android:textColor="@color/text_primary"
+                             android:text="Qwen-3.5 2B High"
+                             android:textStyle="bold" />
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="14sp"
+                             android:textColor="@color/text_secondary"
+                             android:layout_marginTop="4dp"
+                             android:id="@+id/model_size_text"
+                             android:text="1.5 GB" />
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="14sp"
+                             android:textColor="@color/brand_blue"
+                             android:layout_marginTop="6dp"
+                             android:text="Learn more" />
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="match_parent"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="14sp"
+                             android:textColor="@color/text_primary"
+                             android:layout_marginTop="10dp"
+                             android:text="Best Multimodal On device Model supporting images, Text, and videos input with text only output!" />
+
+                        <LinearLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="match_parent"
+                             android:gravity="center_vertical"
+                             android:orientation="horizontal"
+                             android:layout_marginTop="16dp">
+
+                            <TextView
+                                 android:layout_height="42dp"
+                                 android:layout_width="0dp"
+                                 android:clickable="true"
+                                 android:textColor="@color/text_primary"
+                                 android:focusable="true"
+                                 android:foreground="?attr/selectableItemBackground"
+                                 android:background="@drawable/bg_style_button"
+                                 android:gravity="center"
+                                 android:textAppearance="@style/SafeTextAppearance"
+                                 android:textAllCaps="false"
+                                 android:layout_weight="1"
+                                 android:textStyle="bold"
+                                 android:id="@+id/download_button"
+                                 android:text="Download" />
+
+                            <ImageButton
+                                 android:layout_height="42dp"
+                                 android:layout_width="42dp"
+                                 android:visibility="gone"
+                                 android:src="@android:drawable/ic_menu_delete"
+                                 android:contentDescription="Delete Model"
+                                 android:background="@drawable/bg_style_button"
+                                 app:tint="@color/delete_btn_text"
+                                 android:layout_marginStart="12dp"
+                                 android:id="@+id/delete_button" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="match_parent"
+                             android:visibility="gone"
+                             android:orientation="vertical"
+                             android:layout_marginTop="16dp"
+                             android:id="@+id/download_progress_container">
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:textAppearance="@style/SafeTextAppearance"
+                                 android:textSize="13sp"
+                                 android:textColor="@color/text_secondary"
+                                 android:id="@+id/download_status"
+                                 android:text="0 KB / 1.5 GB • 0 KB/s" />
+
+                            <LinearLayout
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="match_parent"
+                                 android:gravity="center_vertical"
+                                 android:orientation="horizontal"
+                                 android:layout_marginTop="8dp">
+
+                                <TextView
+                                     android:layout_height="wrap_content"
+                                     android:layout_width="wrap_content"
+                                     android:layout_marginEnd="8dp"
+                                     android:textAppearance="@style/SafeTextAppearance"
+                                     android:textSize="14sp"
+                                     android:textColor="@color/text_primary"
+                                     android:id="@+id/download_percent"
+                                     android:text="0%" />
+
+                                <ProgressBar
+                                     android:layout_height="6dp"
+                                     android:layout_width="0dp"
+                                     android:max="100"
+                                     android:progressBackgroundTint="@color/progress_track"
+                                     android:progressTint="@color/brand_blue"
+                                     style="?android:attr/progressBarStyleHorizontal"
+                                     android:progress="0"
+                                     android:layout_weight="1"
+                                     android:id="@+id/download_progress_bar" />
+
+                                <ImageButton
+                                     android:layout_height="32dp"
+                                     android:layout_width="32dp"
+                                     android:src="@android:drawable/ic_menu_close_clear_cancel"
+                                     android:background="@null"
+                                     app:tint="@color/text_secondary"
+                                     android:layout_marginStart="8dp"
+                                     android:id="@+id/cancel_download" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="table_border">#C9CED6</color>
+    <color name="table_header_bg">#E6E9ED</color>
+    <color name="table_row_odd">#FFFFFF</color>
+    <color name="table_row_even">#F6F7F9</color>
+</resources>

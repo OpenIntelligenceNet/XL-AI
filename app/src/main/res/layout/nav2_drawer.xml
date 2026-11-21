@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:background="@drawable/rounded_bottom_sheet_background"
+     android:orientation="vertical">
+
+    <ScrollView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:fillViewport="true"
+         android:clipToPadding="false">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:paddingBottom="40dp"
+             android:paddingTop="12dp">
+
+            <View
+                 android:layout_height="4dp"
+                 android:layout_width="40dp"
+                 android:layout_marginBottom="24dp"
+                 android:background="@drawable/rounded_handle"
+                 android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:weightSum="3"
+                 android:orientation="horizontal"
+                 android:paddingBottom="8dp"
+                 android:paddingHorizontal="16dp">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:gravity="center"
+                     android:background="?attr/selectableItemBackground"
+                     android:clickable="true"
+                     android:orientation="vertical"
+                     android:layout_weight="1"
+                     android:focusable="true"
+                     android:id="@+id/option_camera_upload">
+
+                    <ImageView
+                         android:layout_height="28dp"
+                         android:layout_width="28dp"
+                         android:src="@android:drawable/ic_menu_camera"
+                         app:tint="@color/text_primary" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_primary"
+                         android:layout_marginTop="8dp"
+                         android:text="Camera" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:gravity="center"
+                     android:background="?attr/selectableItemBackground"
+                     android:clickable="true"
+                     android:orientation="vertical"
+                     android:layout_weight="1"
+                     android:focusable="true"
+                     android:id="@+id/option_gallery">
+
+                    <ImageView
+                         android:layout_height="28dp"
+                         android:layout_width="28dp"
+                         android:src="@android:drawable/ic_menu_gallery"
+                         app:tint="@color/text_primary" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_primary"
+                         android:layout_marginTop="8dp"
+                         android:text="Gallery" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:gravity="center"
+                     android:background="?attr/selectableItemBackground"
+                     android:clickable="true"
+                     android:orientation="vertical"
+                     android:layout_weight="1"
+                     android:focusable="true"
+                     android:id="@+id/option_files">
+
+                    <ImageView
+                         android:layout_height="28dp"
+                         android:layout_width="28dp"
+                         android:src="@android:drawable/ic_menu_manage"
+                         app:tint="@color/text_primary" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textAppearance="@style/SafeTextAppearance"
+                         android:textSize="14sp"
+                         android:textColor="@color/text_primary"
+                         android:layout_marginTop="8dp"
+                         android:text="Files" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="vertical"
+                 android:id="@+id/generation_settings_container">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="12dp"
+                     android:textAppearance="@style/SafeTextAppearance"
+                     android:textSize="18sp"
+                     android:fontFamily="sans-serif-medium"
+                     android:textColor="@color/text_primary"
+                     android:layout_marginTop="16dp"
+                     android:paddingHorizontal="24dp"
+                     android:text="Generation Parameters" />
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:background="@drawable/bg_settings_group"
+                     android:layout_marginHorizontal="24dp"
+                     android:orientation="vertical">
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:background="?attr/selectableItemBackground"
+                         android:gravity="center_vertical"
+                         android:clickable="true"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp"
+                         android:focusable="true"
+                         android:id="@+id/option_temperature">
+
+                        <LinearLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:orientation="vertical"
+                             android:layout_weight="1">
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:textAppearance="@style/SafeTextAppearance"
+                                 android:textSize="16sp"
+                                 android:textColor="@color/text_primary"
+                                 android:text="Temperature" />
+
+                            <LinearLayout
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:gravity="center_vertical"
+                                 android:orientation="horizontal"
+                                 android:layout_marginTop="4dp">
+
+                                <ImageView
+                                     android:layout_height="14dp"
+                                     android:layout_width="14dp"
+                                     android:src="@drawable/ic_info"
+                                     app:tint="@color/text_secondary" />
+
+                                <TextView
+                                     android:layout_height="wrap_content"
+                                     android:layout_width="wrap_content"
+                                     android:textAppearance="@style/SafeTextAppearance"
+                                     android:textSize="12sp"
+                                     android:textColor="@color/text_secondary"
+                                     android:layout_marginStart="4dp"
+                                     android:text="Controls creativity vs. factual focus." />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="16sp"
+                             android:textColor="@color/brand_blue"
+                             android:id="@+id/tv_val_temperature"
+                             android:text="0.7"
+                             android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                         android:layout_height="2dp"
+                         android:layout_width="match_parent"
+                         android:background="@color/divider_color" />
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:background="?attr/selectableItemBackground"
+                         android:gravity="center_vertical"
+                         android:clickable="true"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp"
+                         android:focusable="true"
+                         android:id="@+id/option_top_k">
+
+                        <LinearLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:orientation="vertical"
+                             android:layout_weight="1">
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:textAppearance="@style/SafeTextAppearance"
+                                 android:textSize="16sp"
+                                 android:textColor="@color/text_primary"
+                                 android:text="Top-K" />
+
+                            <LinearLayout
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:gravity="center_vertical"
+                                 android:orientation="horizontal"
+                                 android:layout_marginTop="4dp">
+
+                                <ImageView
+                                     android:layout_height="14dp"
+                                     android:layout_width="14dp"
+                                     android:src="@drawable/ic_info"
+                                     app:tint="@color/text_secondary" />
+
+                                <TextView
+                                     android:layout_height="wrap_content"
+                                     android:layout_width="wrap_content"
+                                     android:textAppearance="@style/SafeTextAppearance"
+                                     android:textSize="12sp"
+                                     android:textColor="@color/text_secondary"
+                                     android:layout_marginStart="4dp"
+                                     android:text="Limits selection to K most likely words." />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="16sp"
+                             android:textColor="@color/brand_blue"
+                             android:id="@+id/tv_val_top_k"
+                             android:text="40"
+                             android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                         android:layout_height="2dp"
+                         android:layout_width="match_parent"
+                         android:background="@color/divider_color" />
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:background="?attr/selectableItemBackground"
+                         android:gravity="center_vertical"
+                         android:clickable="true"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp"
+                         android:focusable="true"
+                         android:id="@+id/option_top_p">
+
+                        <LinearLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:orientation="vertical"
+                             android:layout_weight="1">
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:textAppearance="@style/SafeTextAppearance"
+                                 android:textSize="16sp"
+                                 android:textColor="@color/text_primary"
+                                 android:text="Top-P" />
+
+                            <LinearLayout
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:gravity="center_vertical"
+                                 android:orientation="horizontal"
+                                 android:layout_marginTop="4dp">
+
+                                <ImageView
+                                     android:layout_height="14dp"
+                                     android:layout_width="14dp"
+                                     android:src="@drawable/ic_info"
+                                     app:tint="@color/text_secondary" />
+
+                                <TextView
+                                     android:layout_height="wrap_content"
+                                     android:layout_width="wrap_content"
+                                     android:textAppearance="@style/SafeTextAppearance"
+                                     android:textSize="12sp"
+                                     android:textColor="@color/text_secondary"
+                                     android:layout_marginStart="4dp"
+                                     android:text="Dynamic word limit based on probability." />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="16sp"
+                             android:textColor="@color/brand_blue"
+                             android:id="@+id/tv_val_top_p"
+                             android:text="0.9"
+                             android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                         android:layout_height="2dp"
+                         android:layout_width="match_parent"
+                         android:background="@color/divider_color" />
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:background="?attr/selectableItemBackground"
+                         android:gravity="center_vertical"
+                         android:clickable="true"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp"
+                         android:focusable="true"
+                         android:id="@+id/option_repeat_penalty">
+
+                        <LinearLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:orientation="vertical"
+                             android:layout_weight="1">
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:textAppearance="@style/SafeTextAppearance"
+                                 android:textSize="16sp"
+                                 android:textColor="@color/text_primary"
+                                 android:text="Repeat Penalty" />
+
+                            <LinearLayout
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:gravity="center_vertical"
+                                 android:orientation="horizontal"
+                                 android:layout_marginTop="4dp">
+
+                                <ImageView
+                                     android:layout_height="14dp"
+                                     android:layout_width="14dp"
+                                     android:src="@drawable/ic_info"
+                                     app:tint="@color/text_secondary" />
+
+                                <TextView
+                                     android:layout_height="wrap_content"
+                                     android:layout_width="wrap_content"
+                                     android:textAppearance="@style/SafeTextAppearance"
+                                     android:textSize="12sp"
+                                     android:textColor="@color/text_secondary"
+                                     android:layout_marginStart="4dp"
+                                     android:text="Prevents the model from repeating itself." />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="16sp"
+                             android:textColor="@color/brand_blue"
+                             android:id="@+id/tv_val_repeat_penalty"
+                             android:text="1.1"
+                             android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="12dp"
+                     android:textAppearance="@style/SafeTextAppearance"
+                     android:textSize="18sp"
+                     android:fontFamily="sans-serif-medium"
+                     android:textColor="@color/text_primary"
+                     android:layout_marginTop="24dp"
+                     android:paddingHorizontal="24dp"
+                     android:text="Token Settings" />
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:background="@drawable/bg_settings_group"
+                     android:layout_marginHorizontal="24dp"
+                     android:orientation="vertical">
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:background="?attr/selectableItemBackground"
+                         android:gravity="center_vertical"
+                         android:clickable="true"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp"
+                         android:focusable="true"
+                         android:id="@+id/option_context_window">
+
+                        <LinearLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:orientation="vertical"
+                             android:layout_weight="1">
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:textAppearance="@style/SafeTextAppearance"
+                                 android:textSize="16sp"
+                                 android:textColor="@color/text_primary"
+                                 android:text="Context Window" />
+
+                            <LinearLayout
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:gravity="center_vertical"
+                                 android:orientation="horizontal"
+                                 android:layout_marginTop="4dp">
+
+                                <ImageView
+                                     android:layout_height="14dp"
+                                     android:layout_width="14dp"
+                                     android:src="@drawable/ic_info"
+                                     app:tint="@color/text_secondary" />
+
+                                <TextView
+                                     android:layout_height="wrap_content"
+                                     android:layout_width="wrap_content"
+                                     android:textAppearance="@style/SafeTextAppearance"
+                                     android:textSize="12sp"
+                                     android:textColor="@color/text_secondary"
+                                     android:layout_marginStart="4dp"
+                                     android:text="Maximum history the model can remember." />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="16sp"
+                             android:textColor="@color/brand_blue"
+                             android:id="@+id/tv_val_context_window"
+                             android:text="4096"
+                             android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                         android:layout_height="2dp"
+                         android:layout_width="match_parent"
+                         android:background="@color/divider_color" />
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:background="?attr/selectableItemBackground"
+                         android:gravity="center_vertical"
+                         android:clickable="true"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp"
+                         android:focusable="true"
+                         android:id="@+id/option_max_tokens">
+
+                        <LinearLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:orientation="vertical"
+                             android:layout_weight="1">
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:textAppearance="@style/SafeTextAppearance"
+                                 android:textSize="16sp"
+                                 android:textColor="@color/text_primary"
+                                 android:text="Max Tokens" />
+
+                            <LinearLayout
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:gravity="center_vertical"
+                                 android:orientation="horizontal"
+                                 android:layout_marginTop="4dp">
+
+                                <ImageView
+                                     android:layout_height="14dp"
+                                     android:layout_width="14dp"
+                                     android:src="@drawable/ic_info"
+                                     app:tint="@color/text_secondary" />
+
+                                <TextView
+                                     android:layout_height="wrap_content"
+                                     android:layout_width="wrap_content"
+                                     android:textAppearance="@style/SafeTextAppearance"
+                                     android:textSize="12sp"
+                                     android:textColor="@color/text_secondary"
+                                     android:layout_marginStart="4dp"
+                                     android:text="Maximum length of the generated response." />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="16sp"
+                             android:textColor="@color/brand_blue"
+                             android:id="@+id/tv_val_max_tokens"
+                             android:text="2048"
+                             android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="12dp"
+                     android:textAppearance="@style/SafeTextAppearance"
+                     android:textSize="18sp"
+                     android:fontFamily="sans-serif-medium"
+                     android:textColor="@color/text_secondary"
+                     android:layout_marginTop="24dp"
+                     android:paddingHorizontal="24dp"
+                     android:text="Advanced options" />
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:background="@drawable/bg_advanced_options"
+                     android:layout_marginHorizontal="24dp"
+                     android:paddingVertical="8dp"
+                     android:orientation="vertical">
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:gravity="center_vertical"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp">
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="18sp"
+                             android:fontFamily="sans-serif-medium"
+                             android:textColor="@color/text_primary"
+                             android:layout_weight="1"
+                             android:text="Audio" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                             android:layout_height="wrap_content"
+                             style="@style/Widget.App.Switch"
+                             android:layout_width="wrap_content"
+                             android:id="@+id/switch_audio" />
+
+                    </LinearLayout>
+
+                    <View
+                         android:layout_height="2dp"
+                         android:layout_width="match_parent"
+                         android:background="@color/divider_color" />
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:gravity="center_vertical"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp">
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="18sp"
+                             android:fontFamily="sans-serif-medium"
+                             android:textColor="@color/text_primary"
+                             android:layout_weight="1"
+                             android:text="Vision" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             style="@style/Widget.App.Switch"
+                             android:id="@+id/switch_video" />
+
+                    </LinearLayout>
+
+                    <View
+                         android:layout_height="2dp"
+                         android:layout_width="match_parent"
+                         android:background="@color/divider_color" />
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:gravity="center_vertical"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp">
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="18sp"
+                             android:fontFamily="sans-serif-medium"
+                             android:textColor="@color/text_primary"
+                             android:layout_weight="1"
+                             android:text="Disable Thinking" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                             android:layout_height="wrap_content"
+                            style="@style/Widget.App.Switch"
+                             android:layout_width="wrap_content"
+                             android:id="@+id/switch_disable_thinking" />
+
+                    </LinearLayout>
+
+                    <View
+                         android:layout_height="2dp"
+                         android:layout_width="match_parent"
+                         android:background="@color/divider_color" />
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:gravity="center_vertical"
+                         android:paddingVertical="12dp"
+                         android:orientation="horizontal"
+                         android:paddingHorizontal="20dp">
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="0dp"
+                             android:textAppearance="@style/SafeTextAppearance"
+                             android:textSize="18sp"
+                             android:fontFamily="sans-serif-medium"
+                             android:textColor="@color/text_primary"
+                             android:layout_weight="1"
+                             android:text="Use mmap (Low RAM)" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                             android:layout_height="wrap_content"
+                             style="@style/Widget.App.Switch"
+                             android:layout_width="wrap_content"
+                             android:id="@+id/switch_mmap" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

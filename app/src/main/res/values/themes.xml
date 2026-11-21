@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <!-- Base application theme. -->
+  <style name="Base.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+
+    <!-- FORCE BLACK FOR PRIMARY ELEMENTS (Buttons, Status Bar, etc.) -->
+    <item name="colorPrimary">@android:color/black</item>
+    <item name="colorPrimaryVariant">@android:color/black</item>
+    <item name="colorOnPrimary">@android:color/white</item>
+
+    <!-- Secondary Elements -->
+    <item name="colorSecondary">#1F1F1F</item>
+    <item name="colorSecondaryVariant">#1F1F1F</item>
+    <item name="colorOnSecondary">@android:color/white</item>
+
+    <!-- Backgrounds -->
+    <item name="android:windowBackground">@android:color/white</item>
+    <item name="colorSurface">@android:color/white</item>
+
+    
+     <item name="android:statusBarColor">@android:color/white</item> <!-- Or @color/screen_bg -->
+     <item name="android:windowLightStatusBar">true</item> 
+    <item name="android:navigationBarColor">@color/screen_bg</item>
+
+    <!-- 🛑 Force Buttons to NOT use Material Tinting -->
+    <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+    <item name="materialButtonStyle">@style/Widget.AppCompat.Button</item>
+
+    <!-- 🩹 Material3 attrs — required by TextInputLayout's ThemeEnforcement -->
+    
+
+  </style>
+
+  <style name="AppTheme" parent="Base.AppTheme" />
+
+  <style name="SafeTextAppearance" parent="android:TextAppearance">
+    <item name="android:textColor">@color/text_primary</item>
+  </style>
+
+</resources>

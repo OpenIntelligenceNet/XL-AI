@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="160dp"
+    android:viewportWidth="240"
+    android:viewportHeight="160">
+
+    <!-- Neural connections -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/text_primary"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:pathData="
+            M40,35 L120,25
+            M40,35 L120,80
+            M40,80 L120,25
+            M40,80 L120,80
+            M40,80 L120,135
+            M40,125 L120,80
+            M40,125 L120,135
+
+            M120,25 L200,55
+            M120,25 L200,105
+            M120,80 L200,55
+            M120,80 L200,105
+            M120,135 L200,55
+            M120,135 L200,105" />
+
+    <!-- Neurons -->
+    <path
+        android:fillColor="@color/text_primary"
+        android:pathData="
+            M33,35 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0
+            M33,80 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0
+            M33,125 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0
+
+            M113,25 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0
+            M113,80 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0
+            M113,135 a7,7 0 1,0 14,0 a7,7 0 1,0 -14,0
+
+            M192,55 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0
+            M192,105 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" />
+</vector>
